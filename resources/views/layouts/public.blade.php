@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title') - Bontang Outdoor</title>
+    <title>@yield('title') - Barru Outdoor</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
@@ -95,49 +95,49 @@
     @stack('styles')
 </head>
 
-<body class="font-sans text-gray-900 antialiased">
+<body class="font-sans antialiased text-gray-900">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-blur border-b border-gray-200/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b nav-blur border-gray-200/20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
                     <a href="{{ route('public.home') }}"
-                        class="flex items-center space-x-2 text-primary-600 hover:text-primary-700 transition-colors duration-200">
-                        <div class="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-mountain text-white text-sm"></i>
+                        class="flex items-center space-x-2 transition-colors duration-200 text-primary-600 hover:text-primary-700">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-500">
+                            <i class="text-sm text-white fas fa-mountain"></i>
                         </div>
-                        <span class="text-xl font-bold">Bontang Outdoor</span>
+                        <span class="text-xl font-bold">Barru Outdoor</span>
                     </a>
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="items-center hidden space-x-8 md:flex">
                     <a href="{{ route('public.home') }}"
-                        class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 relative group">
+                        class="relative font-medium text-gray-700 transition-colors duration-200 hover:text-primary-600 group">
                         Beranda
                         <span
                             class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#products"
-                        class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 relative group">
+                        class="relative font-medium text-gray-700 transition-colors duration-200 hover:text-primary-600 group">
                         Produk
                         <span
                             class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#about"
-                        class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 relative group">
+                        class="relative font-medium text-gray-700 transition-colors duration-200 hover:text-primary-600 group">
                         Tentang
                         <span
                             class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#contact"
-                        class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 relative group">
+                        class="relative font-medium text-gray-700 transition-colors duration-200 hover:text-primary-600 group">
                         Kontak
                         <span
                             class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="{{ route('booking.form') }}"
-                        class="bg-accent hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        class="px-6 py-2 font-medium text-white transition-all duration-200 transform rounded-lg shadow-lg bg-accent hover:bg-orange-600 hover:scale-105 hover:shadow-xl">
                         Booking Sekarang
                     </a>
                 </div>
@@ -145,39 +145,39 @@
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
                     <button type="button"
-                        class="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600 transition-colors duration-200"
+                        class="text-gray-700 transition-colors duration-200 hover:text-primary-600 focus:outline-none focus:text-primary-600"
                         onclick="toggleMobileMenu()">
-                        <i class="fas fa-bars text-xl"></i>
+                        <i class="text-xl fas fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200/20">
+        <div id="mobile-menu" class="hidden border-t md:hidden bg-white/95 backdrop-blur-sm border-gray-200/20">
             <div class="px-4 pt-2 pb-3 space-y-1">
                 <a href="#home"
-                    class="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
+                    class="block px-3 py-2 font-medium text-gray-700 transition-colors duration-200 hover:text-primary-600">
                     Beranda
                 </a>
                 <a href="#products"
-                    class="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
+                    class="block px-3 py-2 font-medium text-gray-700 transition-colors duration-200 hover:text-primary-600">
                     Produk
                 </a>
                 <a href="#about"
-                    class="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
+                    class="block px-3 py-2 font-medium text-gray-700 transition-colors duration-200 hover:text-primary-600">
                     Tentang
                 </a>
                 <a href="#contact"
-                    class="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
+                    class="block px-3 py-2 font-medium text-gray-700 transition-colors duration-200 hover:text-primary-600">
                     Kontak
                 </a>
                 <a href="{{ route('public.home') }}#products"
-                    class="block mx-3 mt-3 bg-accent hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium text-center transition-all duration-200">
+                    class="block px-4 py-2 mx-3 mt-3 font-medium text-center text-white transition-all duration-200 rounded-lg bg-accent hover:bg-orange-600">
                     Booking Sekarang
                 </a>
                 <a href="{{ route('login') }}"
-                    class="block mx-3 mt-2 border border-primary-500 text-primary-600 px-4 py-2 rounded-lg font-medium text-center transition-all duration-200">
+                    class="block px-4 py-2 mx-3 mt-2 font-medium text-center transition-all duration-200 border rounded-lg border-primary-500 text-primary-600">
                     Masuk
                 </a>
             </div>
@@ -190,55 +190,55 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-800 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer class="text-white bg-primary-800">
+        <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                            <i class="fas fa-mountain text-white text-sm"></i>
+                    <div class="flex items-center mb-4 space-x-2">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-accent">
+                            <i class="text-sm text-white fas fa-mountain"></i>
                         </div>
-                        <span class="text-xl font-bold">Bontang Outdoor</span>
+                        <span class="text-xl font-bold">Barru Outdoor</span>
                     </div>
-                    <p class="text-gray-300 mb-6 max-w-md">
-                        Penyedia peralatan camping dan outdoor terpercaya di Bontang.
+                    <p class="max-w-md mb-6 text-gray-300">
+                        Penyedia peralatan camping dan outdoor terpercaya di Barru.
                         Wujudkan petualangan impian Anda bersama kami.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#"
-                            class="w-10 h-10 bg-primary-700 hover:bg-accent rounded-full flex items-center justify-center transition-colors duration-200">
+                            class="flex items-center justify-center w-10 h-10 transition-colors duration-200 rounded-full bg-primary-700 hover:bg-accent">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="#"
-                            class="w-10 h-10 bg-primary-700 hover:bg-accent rounded-full flex items-center justify-center transition-colors duration-200">
+                            class="flex items-center justify-center w-10 h-10 transition-colors duration-200 rounded-full bg-primary-700 hover:bg-accent">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="#"
-                            class="w-10 h-10 bg-primary-700 hover:bg-accent rounded-full flex items-center justify-center transition-colors duration-200">
+                            class="flex items-center justify-center w-10 h-10 transition-colors duration-200 rounded-full bg-primary-700 hover:bg-accent">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Layanan</h3>
+                    <h3 class="mb-4 text-lg font-semibold">Layanan</h3>
                     <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-white transition-colors duration-200">Sewa Peralatan</a>
+                        <li><a href="#" class="transition-colors duration-200 hover:text-white">Sewa Peralatan</a>
                         </li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-200">Paket Camping</a>
+                        <li><a href="#" class="transition-colors duration-200 hover:text-white">Paket Camping</a>
                         </li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-200">Konsultasi</a>
+                        <li><a href="#" class="transition-colors duration-200 hover:text-white">Konsultasi</a>
                         </li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-200">Panduan</a></li>
+                        <li><a href="#" class="transition-colors duration-200 hover:text-white">Panduan</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+                    <h3 class="mb-4 text-lg font-semibold">Kontak</h3>
                     <ul class="space-y-2 text-gray-300">
                         <li class="flex items-start space-x-2">
-                            <i class="fas fa-map-marker-alt mt-1"></i>
-                            <span>Jl. Outdoor No. 123, Bontang, Kalimantan Timur</span>
+                            <i class="mt-1 fas fa-map-marker-alt"></i>
+                            <span>Jl. Outdoor No. 123, Barru, Kalimantan Timur</span>
                         </li>
                         <li class="flex items-center space-x-2">
                             <i class="fas fa-phone"></i>
@@ -246,14 +246,14 @@
                         </li>
                         <li class="flex items-center space-x-2">
                             <i class="fas fa-envelope"></i>
-                            <span>info@bontangoutdoor.com</span>
+                            <span>info@barruoutdoor.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-primary-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Bontang Outdoor. All rights reserved.</p>
+            <div class="pt-8 mt-8 text-center text-gray-400 border-t border-primary-700">
+                <p>&copy; 2024 Barru Outdoor. All rights reserved.</p>
             </div>
         </div>
     </footer>
